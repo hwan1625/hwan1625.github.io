@@ -1,0 +1,29 @@
+I"�<h1 id="81-함수-정의">[8.1] 함수 정의</h1>
+
+<h3 id="함수-정의">함수 정의</h3>
+
+<hr />
+
+<ul>
+  <li>함수 선언문
+    <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>함수 리터럴
+    <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Function 생성자
+    <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">x</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return x</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>화살표 함수 (ECMAScript 6)
+    <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET
