@@ -1,5 +1,10 @@
-*.gem
+node_modules
+vendor
 .bundle
 .sass-cache
-_site
-Gemfile.lock
+.jekyll-metadata
+.jekyll-cache
+*.gem
+
+#<removed/js>
+#<removed/css>
