@@ -1,0 +1,144 @@
+I">K<h2 id="고차-함수">고차 함수</h2>
+
+<hr />
+
+<p><strong>고차 함수</strong>란 함수를 인수로 받는 함수 또는 함수를 반환하는 함수를 말합니다.</p>
+
+<p>고차 함수를 사용하면 처리 패턴이 같은 작업을 추상화하여 하나로 합칠 수 있다.</p>
+
+<h2 id="간단한-예">간단한 예</h2>
+
+<hr />
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">joinStrings</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">f</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">s</span> <span class="o">+=</span> <span class="nx">f</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">s</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">digits</span> <span class="o">=</span> <span class="nx">joinStrings</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="kd">var</span> <span class="nx">randomChars</span> <span class="o">=</span> <span class="nx">joinStrings</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span>
+    <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">26</span><span class="p">)</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">digits</span><span class="p">);</span> <span class="c1">// 01234556789</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">randomChars</span><span class="p">);</span> <span class="c1">// nszfhnwf</span>
+</code></pre></div></div>
+
+<h2 id="메모이제이션">메모이제이션</h2>
+
+<hr />
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">memorize</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">cache</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cache</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span> <span class="o">=</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">x</span><span class="p">];</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">isPrime</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">m</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">%</span> <span class="nx">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">isPrime_memo</span> <span class="o">=</span> <span class="nx">memorize</span><span class="p">(</span><span class="nx">isPrime</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">N</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="nx">isPrime_memo</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="c1">// 쌍둥이 소수의 목록을 출력</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isPrime_memo</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">isPrime_memo</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">,</span><span class="dl">"</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="함수의-합성">함수의 합성</h2>
+
+<hr />
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span> <span class="nx">g</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">f</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">g</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">));</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">square</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">add1</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">square</span><span class="p">,</span> <span class="nx">add1</span><span class="p">);</span> <span class="c1">// h(x)=(x+1)*(x+1)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">h</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="c1">// 9</span>
+</code></pre></div></div>
+
+<h2 id="부분-적용">부분 적용</h2>
+
+<hr />
+
+<p>인수를 여러 개 받는 함수의 몇몇 인수를 상수로 지정해서 새로운 함수를 생성하는 기법</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">mul</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">double</span> <span class="o">=</span> <span class="nx">mul</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">double</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span> <span class="c1">// 6</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">mul.bind(null, 2)</code>를 호출하면 새로운 함수 <code class="language-plaintext highlighter-rouge">double</code>이 만들어진다.  <code class="language-plaintext highlighter-rouge">double</code>엔 컨텍스트가 <code class="language-plaintext highlighter-rouge">null</code>, 첫 번째 인수는 <code class="language-plaintext highlighter-rouge">2</code>인 <code class="language-plaintext highlighter-rouge">mul</code>의 호출 결과가 전달됩니다. 추가 인수는 ‘그대로’ 전달된다.</p>
+
+<p><strong>컨텍스트가 없는 부분 적용</strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">partial</span><span class="p">(</span><span class="nx">func</span><span class="p">,</span> <span class="p">...</span><span class="nx">argsBound</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// (*)</span>
+    <span class="k">return</span> <span class="nx">func</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="p">...</span><span class="nx">argsBound</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">firstName</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">say</span><span class="p">(</span><span class="nx">time</span><span class="p">,</span> <span class="nx">phrase</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`[</span><span class="p">${</span><span class="nx">time</span><span class="p">}</span><span class="s2">] </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="p">}</span><span class="s2">: </span><span class="p">${</span><span class="nx">phrase</span><span class="p">}</span><span class="s2">!`</span><span class="p">);</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+<span class="c1">// 시간을 고정한 부분 메서드를 추가함</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">sayNow</span> <span class="o">=</span> <span class="nx">partial</span><span class="p">(</span>
+  <span class="nx">user</span><span class="p">.</span><span class="nx">say</span><span class="p">,</span>
+  <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getHours</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">:</span><span class="dl">"</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getMinutes</span><span class="p">()</span>
+<span class="p">);</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">sayNow</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// [10:00] John: Hello!</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">partial(func[, arg1, arg2...])</code>을 호출하면 래퍼(<code class="language-plaintext highlighter-rouge">(*)</code>)가 반환된다. 래퍼를 호출하면 <code class="language-plaintext highlighter-rouge">func</code>이 다음과 같은 방식으로 동작한다.</p>
+
+<ul>
+  <li>동일한 <code class="language-plaintext highlighter-rouge">this</code>를 받습니다(<code class="language-plaintext highlighter-rouge">user.sayNow</code>는 <code class="language-plaintext highlighter-rouge">user</code>를 대상으로 호출된다).</li>
+  <li><code class="language-plaintext highlighter-rouge">partial</code>을 호출할 때 받은 인수(<code class="language-plaintext highlighter-rouge">"10:00"</code>)는 <code class="language-plaintext highlighter-rouge">...argsBound</code>에 전달된다.</li>
+  <li>래퍼에 전달된 인수(<code class="language-plaintext highlighter-rouge">"Hello"</code>)는 <code class="language-plaintext highlighter-rouge">...args</code>가 된다.</li>
+</ul>
+
+<h2 id="커링">커링</h2>
+
+<hr />
+
+<p>커링이란 인수를 두 개 이상 받는 함수를 분해하여 인수가 하나인 함수의 중첩 함수로 변환하는 작업</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">pow</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">exponent</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">base</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span> <span class="nx">exponent</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+<span class="c1">// Math.pow(base, exponent) = pow(exponent)(base)</span>
+<span class="kd">var</span> <span class="nx">square</span> <span class="o">=</span> <span class="nx">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">sqrt</span> <span class="o">=</span> <span class="nx">pow</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">cubicroot</span> <span class="o">=</span> <span class="nx">pow</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">abs_a</span> <span class="o">=</span> <span class="nx">pow</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)(</span><span class="nx">a</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)).</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">sum</span><span class="p">));</span>
+</code></pre></div></div>
+:ET

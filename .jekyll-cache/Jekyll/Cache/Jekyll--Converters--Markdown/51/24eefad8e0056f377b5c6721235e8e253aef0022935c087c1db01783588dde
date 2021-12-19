@@ -1,0 +1,29 @@
+I"�<h3 id="함수-호출"><strong>함수 호출</strong></h3>
+
+<hr />
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">f</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 생성자 호출 (함수의 참조를 저장한 변수 앞에 new 키워드)</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+
+<span class="c1">// 메서드 호출 (객체의 프로퍼티에 저장된 값이 함수 타입)</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">m</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{...};</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">m</span><span class="p">();</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// call, apply를 사용한 간접 호출</span>
+</code></pre></div></div>
+
+<h3 id="즉시-실행-함수">즉시 실행 함수</h3>
+
+<hr />
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{...})(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{...}());</span>
+<span class="o">+</span><span class="kd">function</span><span class="p">()</span> <span class="p">{...}()</span>
+
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{...})();</span>
+</code></pre></div></div>
+:ET
