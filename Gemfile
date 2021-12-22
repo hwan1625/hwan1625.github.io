@@ -6,13 +6,9 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 # Gemfile
-gem "jekyll-include-cache"
-gem "jekyll", "~> 4.0"
-gem "jekyll-paginate", "~> 1.1.0"
-gem "jekyll-sitemap"
-gem "jekyll-gist"
-gem "jekyll-feed"
-gem "jemoji"
-gem "wdm", ">= 0.1.0"
-gem "jekyll-feed"
+
+gem "jekyll-theme-hydejack"
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+
 gem "webrick", "~> 1.7"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2021/12/18/js-function-01.html</loc>
+<loc>http://localhost:4000/javascript/function/2021/12/18/js-function-01.html</loc>
 <lastmod>2021-12-18T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -46,5 +46,26 @@
 </url>
 <url>
 <loc>http://localhost:4000/forms-by-example.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/NOTICE.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/licenses/Apache-2.0.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/licenses/GPL-3.0.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/licenses/MIT.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/licenses/PRO.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/licenses/W3C-20150513.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
 </url>
 </urlset>

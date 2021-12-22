@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-20T20:38:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydejack</title><entry><title type="html">[8.11] ECMAScript 6부터 추가된 함수의 기능</title><link href="http://localhost:4000/2021/12/19/js-function-11.html" rel="alternate" type="text/html" title="[8.11] ECMAScript 6부터 추가된 함수의 기능" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-11</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-11.html">&lt;table&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-21T13:12:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydejack</title><entry><title type="html">[8.11] ECMAScript 6부터 추가된 함수의 기능</title><link href="http://localhost:4000/2021/12/19/js-function-11.html" rel="alternate" type="text/html" title="[8.11] ECMAScript 6부터 추가된 함수의 기능" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-11</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-11.html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;추가된 함수&lt;/th&gt;
@@ -281,9 +281,7 @@ console.log(t);  // [[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;&quot;]
 &lt;span class=&quot;nx&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`a\n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b\n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">추가된 함수 기능 화살표 함수   나머지 매개변수   인수의 기본값   이터레이터   제너레이터   템플릿 리터럴의 태그 함수  </summary></entry><entry><title type="html">[8.2] 함수 호출</title><link href="http://localhost:4000/2021/12/19/js-function-02.html" rel="alternate" type="text/html" title="[8.2] 함수 호출" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-02</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-02.html">&lt;h3 id=&quot;함수-호출&quot;&gt;&lt;strong&gt;함수 호출&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;hr /&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">추가된 함수 기능 화살표 함수   나머지 매개변수   인수의 기본값   이터레이터   제너레이터   템플릿 리터럴의 태그 함수  </summary></entry><entry><title type="html">함수 호출</title><link href="http://localhost:4000/2021/12/19/js-function-02.html" rel="alternate" type="text/html" title="함수 호출" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-02</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-02.html">&lt;hr /&gt;
 
 &lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -308,9 +306,7 @@ console.log(t);  // [[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;&quot;]
 &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{...}()&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{...})();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">함수 호출</summary></entry><entry><title type="html">[8.3] 함수의 인수</title><link href="http://localhost:4000/2021/12/19/js-function-03.html" rel="alternate" type="text/html" title="[8.3] 함수의 인수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-03</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-03.html">&lt;h3 id=&quot;인수의-생략&quot;&gt;인수의 생략&lt;/h3&gt;
-
-&lt;hr /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">인수의 생략</title><link href="http://localhost:4000/2021/12/19/js-function-03.html" rel="alternate" type="text/html" title="인수의 생략" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-03</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-03.html">&lt;hr /&gt;
 
 &lt;p&gt;함수 정의식에 작성된 인자 개수보다 인수를 적게 전달하면 생략된 인자는 undefined 된다.
 → 초기값 설정&lt;/p&gt;
@@ -370,9 +366,7 @@ console.log(t);  // [[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;&quot;]
 &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//6&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">인수의 생략</summary></entry><entry><title type="html">[8.4] 재귀 함수</title><link href="http://localhost:4000/2021/12/19/js-function-04.html" rel="alternate" type="text/html" title="[8.4] 재귀 함수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-04</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-04.html">&lt;h3 id=&quot;재귀-함수&quot;&gt;재귀 함수&lt;/h3&gt;
-
-&lt;hr /&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">재귀 함수</title><link href="http://localhost:4000/2021/12/19/js-function-04.html" rel="alternate" type="text/html" title="재귀 함수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-04</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-04.html">&lt;hr /&gt;
 
 &lt;p&gt;재귀 호출은 반드시 멈춰야 한다.&lt;/p&gt;
 
@@ -400,9 +394,7 @@ console.log(t);  // [[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;&quot;]
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;callee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;fact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">재귀 함수</summary></entry><entry><title type="html">[8.5] 프로그램의 평가와 실행 과정</title><link href="http://localhost:4000/2021/12/19/js-function-05.html" rel="alternate" type="text/html" title="[8.5] 프로그램의 평가와 실행 과정" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-05</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-05.html">&lt;h3 id=&quot;실행-가능한-코드&quot;&gt;실행 가능한 코드&lt;/h3&gt;
-
-&lt;hr /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">실행 가능한 코드</title><link href="http://localhost:4000/2021/12/19/js-function-05.html" rel="alternate" type="text/html" title="실행 가능한 코드" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-05</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-05.html">&lt;hr /&gt;
 
 &lt;p&gt;실행 가능한 코드 : 전역 코드, 함수 코드, eval 코드
 eval 코드는 별도의 동작 환경에서 실행되므로 제외&lt;/p&gt;
@@ -561,9 +553,7 @@ eval 코드는 별도의 동작 환경에서 실행되므로 제외&lt;/p&gt;
 
 &lt;p&gt;참조 카운터 방식은 참조하는 객체 개수를 세어 참조하는 객체 개수가 0이 되었을 때 메모리에서 해제하는 방식이다. 하지만 고립된 &lt;strong&gt;순환 참조&lt;/strong&gt;가 발생했을 때 메모리 누수가 발생한다는 단점이 있다.&lt;/p&gt;
 
-&lt;p&gt;마크 앤 스윕 알고리즘은 전역 객체가 참조할 수 없는 객체를 검색하고 해당한느 객체가 있다면 메모리에서 해제하는 방식이다.&lt;/p&gt;</content><author><name></name></author><summary type="html">실행 가능한 코드</summary></entry><entry><title type="html">[8.6] 클로저</title><link href="http://localhost:4000/2021/12/19/js-function-06.html" rel="alternate" type="text/html" title="[8.6] 클로저" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-06</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-06.html">&lt;h2 id=&quot;클로저&quot;&gt;클로저&lt;/h2&gt;
-
-&lt;hr /&gt;
+&lt;p&gt;마크 앤 스윕 알고리즘은 전역 객체가 참조할 수 없는 객체를 검색하고 해당한느 객체가 있다면 메모리에서 해제하는 방식이다.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">클로저</title><link href="http://localhost:4000/2021/12/19/js-function-06.html" rel="alternate" type="text/html" title="클로저" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-06</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-06.html">&lt;hr /&gt;
 
 &lt;p&gt;자기 자신이 정의된 환경에서 함수 안에 있는 자유 변수의 식별자 결정을 실행한다. [8.5]&lt;/p&gt;
 
@@ -684,9 +674,7 @@ eval 코드는 별도의 동작 환경에서 실행되므로 제외&lt;/p&gt;
     &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">클로저</summary></entry><entry><title type="html">[8.7] 이름 공간</title><link href="http://localhost:4000/2021/12/19/js-function-07.html" rel="alternate" type="text/html" title="[8.7] 이름 공간" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-07</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-07.html">&lt;h2 id=&quot;전역-이름-공간의-오염&quot;&gt;전역 이름 공간의 오염&lt;/h2&gt;
-
-&lt;hr /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">전역 이름 공간의 오염</title><link href="http://localhost:4000/2021/12/19/js-function-07.html" rel="alternate" type="text/html" title="전역 이름 공간의 오염" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-07</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-07.html">&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;이름 공간&lt;/strong&gt;이란 변수 이름과 함수 이름을 한곳에 모아 두어 이름 충돌을 미리 방지하고, 변수와 함수를 쉽게 가져다 쓸 수 있게 만든 메커니즘이다.&lt;/p&gt;
 
@@ -732,9 +720,7 @@ eval 코드는 별도의 동작 환경에서 실행되므로 제외&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;모듈 패턴&lt;/strong&gt;
 모듈은 함수 여러 개와 함수가 공유하는 데이터로 구성된다. 모듈을 즉시 실행 함수 안에 작성하여 실행하면 이름이 충돌하는 상황을 피할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">전역 이름 공간의 오염</summary></entry><entry><title type="html">[8.8] 객체로서의 함수</title><link href="http://localhost:4000/2021/12/19/js-function-08.html" rel="alternate" type="text/html" title="[8.8] 객체로서의 함수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-08</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-08.html">&lt;h2 id=&quot;함수는-객체&quot;&gt;함수는 객체&lt;/h2&gt;
-
-&lt;hr /&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">함수는 객체</title><link href="http://localhost:4000/2021/12/19/js-function-08.html" rel="alternate" type="text/html" title="함수는 객체" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-08</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-08.html">&lt;hr /&gt;
 
 &lt;p&gt;자바스크립트 함수는 Function 객체이며, 일급 객체 즉, 일급 함수라고 부른다.&lt;/p&gt;
 
@@ -873,9 +859,7 @@ eval 코드는 별도의 동작 환경에서 실행되므로 제외&lt;/p&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fibonacci&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">함수는 객체</summary></entry><entry><title type="html">[8.9] 고차 함수</title><link href="http://localhost:4000/2021/12/19/js-function-09.html" rel="alternate" type="text/html" title="[8.9] 고차 함수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-09</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-09.html">&lt;h2 id=&quot;고차-함수&quot;&gt;고차 함수&lt;/h2&gt;
-
-&lt;hr /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">고차 함수</title><link href="http://localhost:4000/2021/12/19/js-function-09.html" rel="alternate" type="text/html" title="고차 함수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-09</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-09.html">&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;고차 함수&lt;/strong&gt;란 함수를 인수로 받는 함수 또는 함수를 반환하는 함수를 말합니다.&lt;/p&gt;
 
@@ -1015,9 +999,7 @@ eval 코드는 별도의 동작 환경에서 실행되므로 제외&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;abs_a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">고차 함수</summary></entry><entry><title type="html">[8.10] 콜백 함수</title><link href="http://localhost:4000/2021/12/19/js-function-10.html" rel="alternate" type="text/html" title="[8.10] 콜백 함수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-10</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-10.html">&lt;h2 id=&quot;콜백-함수&quot;&gt;콜백 함수&lt;/h2&gt;
-
-&lt;hr /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">콜백 함수</title><link href="http://localhost:4000/2021/12/19/js-function-10.html" rel="alternate" type="text/html" title="콜백 함수" /><published>2021-12-19T00:00:00+09:00</published><updated>2021-12-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/19/js-function-10</id><content type="html" xml:base="http://localhost:4000/2021/12/19/js-function-10.html">&lt;hr /&gt;
 
 &lt;p&gt;호출한 함수 f안에서 특정 콜백 함수를 실행시켜서 그 콜백 함수에 제어권을 부여할 수 있다.&lt;/p&gt;
 
@@ -1048,4 +1030,4 @@ eval 코드는 별도의 동작 환경에서 실행되므로 제외&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setInterval(function() {...}, 2000);&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">콜백 함수</summary></entry></feed>
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setInterval(function() {...}, 2000);&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>

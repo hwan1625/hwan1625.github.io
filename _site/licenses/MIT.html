@@ -30,11 +30,10 @@ Powered by Hydejack v9.1.5 <https://hydejack.com/>
   
     
 
-<title>전역 이름 공간의 오염 | Hydejack</title>
+<title>MIT License | Hydejack</title>
 <meta name="description" content="
-
 ">
-<link rel="canonical" href="http://localhost:4000/2021/12/19/js-function-07.html">
+<link rel="canonical" href="http://localhost:4000/licenses/MIT.html">
 
   
 
@@ -60,7 +59,7 @@ Powered by Hydejack v9.1.5 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.5" />
 
 
-<link rel="alternate" href="http://localhost:4000/2021/12/19/js-function-07.html" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/licenses/MIT.html" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Hydejack" />
 
@@ -162,7 +161,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   <main
   id="_main"
-  class="content layout-post"
+  class="content layout-page"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -175,69 +174,22 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
           <span>/</span>
           
           
-          <a href="/2021/">2021</a>
+          <a href="/licenses/">licenses</a>
         
       </li>
     
       <li>
         
           <span>/</span>
-          
-          
-          <a href="/2021/12/">12</a>
-        
-      </li>
-    
-      <li>
-        
-          <span>/</span>
-          
-          
-          <a href="/2021/12/19/">19</a>
-        
-      </li>
-    
-      <li>
-        
-          <span>/</span>
-          <span>js-function-07.html</span>
+          <span>MIT.html</span>
         
       </li>
     
   
 </ul></nav>
-  
-
-
-
-
-
-
-
-
-
-
-<article id="post-2021-12-19-js-function-07" class="page post mb6" role="article">
+  <article class="page mb6" role="article">
   <header>
-    <h1 class="post-title flip-project-title">
-      
-        전역 이름 공간의 오염
-      
-    </h1>
-
-    <div class="post-date">
-      
-      <span class="ellipsis mr1">
-        <time datetime="2021-12-19T00:00:00+09:00">19 Dec 2021</time>  
-      </span>
-      
-        
-      
-    </div>
-
-    
-    
-
+    <h1 class="page-title">MIT License</h1>
     
 
 
@@ -247,92 +199,33 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   </header>
 
-  
-    <hr />
+  <p>Copyright (c) &lt;YEAR&gt; &lt;COPYRIGHT HOLDER&gt;</p>
 
-<p><strong>이름 공간</strong>이란 변수 이름과 함수 이름을 한곳에 모아 두어 이름 충돌을 미리 방지하고, 변수와 함수를 쉽게 가져다 쓸 수 있게 만든 메커니즘이다.</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
 
-<p>전역 변수와 전역 함수를 전역 객체에 선언하는 행위를 <strong>‘전역 유효 범위를 오염시킨다’</strong>고 한다.</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
 
-<ul>
-  <li>라이브러리 파일을 여러 개 읽어 들여 사용할 때</li>
-  <li>규모가 큰 프로그램을 만들 때</li>
-  <li>여러 사람이 한 프로그램을 만들 때</li>
-</ul>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
 
-<p>이러한 예기치 않은 오류를 피하려면 전역 유효 범위의 오염을 <strong>최소화</strong>해야 한다.</p>
-
-<h2 id="객체를-이름-공간으로-활용하기">객체를 이름 공간으로 활용하기</h2>
-
-<hr />
-
-<p>객체를 값으로 가지는 전역 변수를 하나 생성하고, 그 객체에 프로그램 전체에서 사용하는 모든 변수와 함수를 프로퍼티로 정의한다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">var myApp = myApp || {};</code></p>
-
-<p>myApp이 이미 정의되어 있을 때는 그것을 사용하지 않고 그렇지 않으면 빈 객체를 myApp에 할당.</p>
-
-<p><code class="language-plaintext highlighter-rouge">myApp.name = "Tom"</code> , <code class="language-plaintext highlighter-rouge">myApp.showName = function() {...};</code></p>
-
-<p>이렇게 되면 사용자가 정의한 전역 변수가 되므로 전역 유효 범위의 오염을 최소화 할 수 있다.
-또한 <strong>부분 이름 공간</strong>을 만들 수도 있다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">myApp.view = {};</code> , <code class="language-plaintext highlighter-rouge">myApp.controls = {};</code></p>
-
-<p>각각의 부분 이름 공간 안에 필요한 변수 또는 함수를 프로퍼티로 정의해서 사용한다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">myApp.view.draw = function() {...};</code> , <code class="language-plaintext highlighter-rouge">myApp.controls.timeInterval = 16;</code></p>
-
-<h2 id="함수를-이름-공간으로-활용하기">함수를 이름 공간으로 활용하기</h2>
-
-<hr />
-
-<p>즉시 실행 함수 내부에서 선언한 변수는 지역 변수이므로 전역 변수와 이름이 충돌하지 않는다. 따라서 일시적인 처리를 수행하고자 할 때 그 내용물을 즉시 실행 함수 안에 작성하면 전역 유효 공간을 오염시키지 않고 실행할 수 있다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">(function() {...})();</code></p>
-
-<ul>
-  <li><strong>모듈 패턴</strong>
-모듈은 함수 여러 개와 함수가 공유하는 데이터로 구성된다. 모듈을 즉시 실행 함수 안에 작성하여 실행하면 이름이 충돌하는 상황을 피할 수 있다.</li>
-</ul>
-
-  
 </article>
-
 
 
   <hr class="dingbat related mb6" />
 
 
 
-
-
-
-  
-     
-
-
-
-  
-
-  
-  
-
-  
-    
-
-
-  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/2021/12/19/js-function-11.html" class="flip-title"><span>[8.11] ECMAScript 6부터 추가된 함수의 기능</span></a>  <time class="faded fine" datetime="2021-12-19T00:00:00+09:00">19 Dec 2021</time></li>                        <li class="h4">  <a href="/2021/12/19/js-function-10.html" class="flip-title"><span>콜백 함수</span></a>  <time class="faded fine" datetime="2021-12-19T00:00:00+09:00">19 Dec 2021</time></li>                        <li class="h4">  <a href="/2021/12/19/js-function-09.html" class="flip-title"><span>고차 함수</span></a>  <time class="faded fine" datetime="2021-12-19T00:00:00+09:00">19 Dec 2021</time></li>            </ul></aside>
-
-  
-
-  
-  
-
-  
-    
-
-  
 
 
   
